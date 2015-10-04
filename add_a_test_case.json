@@ -1,0 +1,37 @@
+{
+  "Name": "testcase2",
+  "Description": "testcase",
+  "Assumption": "assumption1",
+  "Limitation": "limitation",
+  "Note": "note",
+  "EstimatedTimeToRun": 0,
+  "Data": "data",
+  "State": {
+    "Id": 1
+  },
+  "Product": {
+    "Id": 37
+  },
+  "Priority": {
+    "Id": 1
+  },
+  "TestType": {
+    "Id": 7
+  },
+  "HowFound": {
+    "Id": 5
+  },
+  "CodeBase": {
+    "Id": 54
+  },
+  "Release": {
+    "Id": 125
+  },
+  "Steps": [
+    {
+      "Action": "action",
+      "ExpectedResult": "result",
+      "Comment": "comment"
+    }
+  ]
+}

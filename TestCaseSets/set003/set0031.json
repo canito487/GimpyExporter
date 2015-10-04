@@ -1,0 +1,157 @@
+"Validate deletion of new library"{
+    "TestSuites": [],
+    "TestSuiteExecutionAttributes": [],
+    "Author": {
+        "LastModifiedDateTime": "2014-05-05T17:39:43",
+        "FirstName": "Alex",
+        "CreatedDateTime": "2014-05-05T17:39:43",
+        "LastName": "Hernandez",
+        "Email": "Alex.Hernandez@inin.com",
+        "LastLoginDateTime": "2015-09-22T13:31:46.01",
+        "Department": {
+            "LastModifiedDateTime": "2015-04-22T21:16:53.577",
+            "Description": null,
+            "CreatedDateTime": "2008-04-22T18:30:00",
+            "Active": true,
+            "Id": 12,
+            "Name": "Testing - PIT"
+        },
+        "Login": "Alex.Hernandez",
+        "AccessLevel": {
+            "UserAccessLevel": 3,
+            "Name": "User",
+            "Description": "User has only access"
+        },
+        "IsAccountActive": true,
+        "Id": 314
+    },
+    "LastModifiedDateTime": "2015-09-22T13:31:59.447",
+    "HowFound": {
+        "Description": null,
+        "Id": 5,
+        "Name": "Tester Input"
+    },
+    "Priority": {
+        "Id": 1,
+        "Name": "P1"
+    },
+    "State": {
+        "CreatedDateTime": "2003-06-27T04:34:00",
+        "Description": "Test case or suite has been made unavailable for administrative reasons (maybe it conflicts with or is superceded by another case/suite; maybe it was just garbage, etc.) and should not be used as a basis for test execution",
+        "Id": 2,
+        "Name": "Inactive"
+    },
+    "Version": 0,
+    "Product": {
+        "Id": 37,
+        "LastUpdated": "2013-11-26T19:42:39.57",
+        "Name": "PureCloud"
+    },
+    "Description": "This test case is designed to validate a library is deleted in the GUI and it verifies that it has been removed from the list.",
+    "MaxVersion": 0,
+    "TestType": {
+        "Id": 2,
+        "Name": "GUI"
+    },
+    "LastUserToChange": {
+        "LastModifiedDateTime": "2014-05-05T17:39:43",
+        "FirstName": "Alex",
+        "CreatedDateTime": "2014-05-05T17:39:43",
+        "LastName": "Hernandez",
+        "Email": "Alex.Hernandez@inin.com",
+        "LastLoginDateTime": "2015-09-22T13:31:46.01",
+        "Department": {
+            "LastModifiedDateTime": "2015-04-22T21:16:53.577",
+            "Description": null,
+            "CreatedDateTime": "2008-04-22T18:30:00",
+            "Active": true,
+            "Id": 12,
+            "Name": "Testing - PIT"
+        },
+        "Login": "Alex.Hernandez",
+        "AccessLevel": {
+            "UserAccessLevel": 3,
+            "Name": "User",
+            "Description": "User has only access"
+        },
+        "IsAccountActive": true,
+        "Id": 314
+    },
+    "Limitation": "",
+    "Name": "Validate deletion of new library",
+    "CreatedDateTime": "2015-09-22T13:31:59.447",
+    "CodeBase": {
+        "Id": 54,
+        "Name": "PureCloud"
+    },
+    "Steps": [
+        {
+            "Action": "Under \"Libraries tab on left hand side, user finds a library and cliks on \"edit library\" drop down and deletes library. ",
+            "Comment": "",
+            "CreatedDateTime": "2015-09-22T13:31:59.447",
+            "Id": 1075760,
+            "ExpectedResult": "GUI displays library has been removed from the list."
+        }
+    ],
+    "Release": {
+        "MajorVersion": {
+            "Version": "1.0",
+            "Id": 6
+        },
+        "Product": {
+            "Id": 37,
+            "LastUpdated": "2013-11-26T19:42:39.57",
+            "Name": "PureCloud"
+        },
+        "Description": "Initial PureCloud GA release",
+        "LastModifiedDateTime": "2015-07-17T21:22:13.12",
+        "CodeBase": {
+            "Id": 54,
+            "Name": "PureCloud"
+        },
+        "State": {
+            "CreatedDateTime": "2003-06-27T04:34:00",
+            "Description": "Information is incomplete - but enough is provided to create the case or suite record and allow it to be completed later",
+            "Id": 3,
+            "Name": "Incomplete"
+        },
+        "LastUpdatedBy": {
+            "LastModifiedDateTime": "2015-06-02T14:42:05",
+            "FirstName": "Nathan",
+            "CreatedDateTime": "2014-05-19T19:59:19",
+            "LastName": "Nieman",
+            "Email": "Nathan.Nieman@inin.com",
+            "LastLoginDateTime": "2015-08-06T20:38:11.747",
+            "Department": {
+                "LastModifiedDateTime": "2015-04-22T21:16:53.577",
+                "Description": null,
+                "CreatedDateTime": "2003-06-27T15:33:00",
+                "Active": true,
+                "Id": 5,
+                "Name": "Testing - Development"
+            },
+            "Login": "Nathan.Nieman",
+            "AccessLevel": {
+                "UserAccessLevel": 1,
+                "Name": "Administrator",
+                "Description": "Administrator has access"
+            },
+            "IsAccountActive": true,
+            "Id": 326
+        },
+        "MinorProductVersion": {
+            "Version": "GA",
+            "Id": 1
+        },
+        "Id": 125
+    },
+    "Attributes": [],
+    "EstimatedTimeToRun": 0.0,
+    "Note": "",
+    "Attachments": [],
+    "Data": "",
+    "WillAutomate": false,
+    "Assumption": "User is in Admin tab; User has full profile access(Audit permission); Environment is upgraded to Engage; User has a library created;",
+    "Id": 43025,
+    "Issues": []
+}
