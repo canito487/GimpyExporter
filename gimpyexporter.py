@@ -15,6 +15,7 @@ import shutil
 from openpyxl import load_workbook
 import bll
 import sys
+import os
 # Title
 print "\n"
 print "                                             |---- GIMPY EXPORTER v1.2 ----|"
@@ -90,7 +91,11 @@ print "\n"
 
 print "\n"
 
-print "---------------------------- TEST CASE RESULTS---------------------------------"
+title_separator = "****************************"
+
+tc_results_title =  title_separator + "TEST CASE RESULTS" + title_separator
+
+print tc_results_title
 
 print "\n"
 
@@ -173,7 +178,10 @@ for i in range(len(test_cases_list)):
 
     """Create the Test Case"""
 
+
+
     addtestcase_response = bll.db.add_a_test_case(data, loginToken)
+
 
 
     """Update the Feature suite"""
@@ -185,27 +193,67 @@ for i in range(len(test_cases_list)):
 
 
     # Print the results of test cases of each test case that has been created
-    print "Test Case"
-    print "---------"
-    print "" +    str(data['Name'])
-    print "\n"
-    print "Status Code: " + str(updatefs_response)
-    print "Test Case ID: " + str(addtestcase_response['Id'])
-    print "Feature Suite " + fs_id + ": Updated successfully with TC" + str(addtestcase_response['Id'])
+    def print_results():
+        separator = ""
+        for x in range(0,len(str((data)['Name']))):
+            separator+=str("-")
+        print "Test Case"
+        print "" +    str(data['Name'])
+        print separator
+        print "\n"
+        print "Status Code: " + str(updatefs_response)
+        print "Test Case ID: " + str(addtestcase_response['Id'])
+        print "Feature Suite " + fs_id + ": Updated successfully with TC" + str(addtestcase_response['Id'])
 
+    # Call print_results()
+    print_results()
+
+    results = []
+
+    def write_results():
+        separator = ""
+        for x in range(0,len(str((data)['Name']))):
+            separator+=str("-")
+        results.append("Test Case:\n")
+        results.append("" + str((data)['Name']) + "\n")
+        results.append(separator + "\n")
+        results.append("Status Code: " + str(updatefs_response) + "\n")
+        results.append("Test Case ID: " + str(addtestcase_response['Id']) + "\n")
+        results.append("Feature Suite " + fs_id + ": Updated successfully with TC" + str(addtestcase_response['Id']) + "\n\n\n")
+        return results
+
+    # Call write_results():
+    write_results()
+
+    """Writes results to TestCaseResults file and closes it"""
+
+    jsonFile = open(testCaseSet + "/TestCaseResults.txt" , "a")
+    for result in results:
+        jsonFile.write(result)
+    jsonFile.close()
+
+# (json.dumps(results, indent=4 * ' '))
 
     # Append the responses to test_case_id list to write to excel file
     test_case_id.append(addtestcase_response['Id'])
 
+    #TC Name
+    tc_id = str(addtestcase_response['Id'])
 
-    """Writes new information to new file and closes it"""
+    # Rename json file
+    os.rename(testCaseSet + "/%s%d.json" % (name,i), testCaseSet + "/TC%s.json" % (tc_id))
 
-    jsonFile = open(testCaseSet + "/%s%d.json" % (name,i), "w+")
+    """Writes TC response to new file and closes it"""
+
+    jsonFile = open(testCaseSet + "/TC%s.json" % (tc_id), "w+")
     jsonFile.write(json.dumps(data['Name'], indent=4 * ' '))
     jsonFile.write(json.dumps(addtestcase_response, indent=4 * ' '))
     jsonFile.close()
 
+
     print "\n"
+
+print "\n"
 
 """Writes the ID back to the excel file"""
 # Load the excel file
@@ -223,7 +271,9 @@ wb.save(excelPath)
 
 print "\n"
 
-print "---------------------------- EXPORTS COMPLETED---------------------------------"
+tc_exports_footer = title_separator + "EXPORTS COMPLETED" + title_separator
+
+print tc_exports_footer
 
 print "\n"
 
