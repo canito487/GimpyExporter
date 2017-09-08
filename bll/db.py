@@ -6,9 +6,9 @@ def login_gimpy(username):
 
     """Login to gimpy"""
 
-    # This is the gimpy URL used to login to the database       *****IMPORTANT*****
-    gimpyUrl = "http://qf-kentucky/tcdbv2/login"         # <---- Use this Testing Env URL first before using Prod env
-                                                    # Prod env url: "http://tcdb.inin.com/tcdbv2/login"
+    # Type in your rest api url       *****IMPORTANT*****
+    gimpyUrl = ""         # <---- Use this Testing Env URL 
+                                                    
 
     # Method body:
     loginPayload = {
@@ -34,8 +34,8 @@ def add_a_test_case(body, token):
     """Create the Test Case"""
 
     # This is the gimpy URL used to add a test case to the DB                       *****IMPORTANT*****
-    addTestCaseURL = "http://qf-kentucky.qfun.com/tcdbv2/api/testcases" # <--- Use this test env url first then Prod
-                                                            # Prod env url: http://tcdb.inin.com/tcdbv2/api/testcases
+    addTestCaseURL = "" # <--- Use this test env url first
+                                                           
 
     # Method body
     addTestCase_PayLoad = body
@@ -59,7 +59,7 @@ def update_feature_suite(fsid, testcaseid, token):
     """Update Feature Suite"""
 
     # This is the gimpy URL used to add a test case to the DB
-    updateFsURL = "http://qf-kentucky.qfun.com/tcdbv2/api/testsuites/"+fsid+"/testcases"
+    updateFsURL = ""
 
     # Method body
     updateFsPayload = [
