@@ -20,15 +20,3 @@ README - GIMPY EXPORTER V1.2
 3) Use the add a test case template – add-a-test-case.json
 4) Start writing test cases on row 3
 4) The URLs are already in the script but here it is just in case:
-
-This is the gimpy URL used to login to the database  
-http://qf-kentucky/tcdbv2/login  <---- Use this Testing Env URL first before using Prod env
-                                                    					 
-Prod env url: http://tcdb.inin.com/tcdbv2/login
-
-
-
-This is the gimpy URL used to add a test case to the DB 
-http://qf-kentucky.qfun.com/tcdbv2/api/testcases  <--- Use this test env url first then Prod
- 
-Prod env url: http://tcdb.inin.com/tcdbv2/api/testcases
