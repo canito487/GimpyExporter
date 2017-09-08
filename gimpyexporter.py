@@ -5,7 +5,7 @@
 # Written by Alex Hernandez
 # 09/17/2015
 """ This script will read an excel file and will automatically
-    upload the test cases to GIMPY, Update the feature suite, and update your excel file.
+    upload the test cases to a rest framework and update your excel file.
 """
 # Import all necessary modules.
 import xlrd
